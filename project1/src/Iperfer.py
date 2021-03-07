@@ -3,13 +3,10 @@ import sys
 import time
 
 class iperfer:
-    numbytes = 0
     data = 0
     kb = 0
     mb = 0
     #rate is just mbps
-    rate = 0
-    sentbytes = 0
     
     if len(sys.argv) != 4:
         print('Error: missing or additional arguments')
@@ -33,16 +30,16 @@ class iperfer:
     elapsed = t_end - t_start
     while  elapsed >= 0:
 #    while time.time() < t_end:
-        clientSocket.send(bytes(data))
+        clientSocket.send(bytes(1000))
         data = data + 1000
+       # data = data + 1000
         t_start = time.time()
         elapsed =  t_end - t_start
 
     clientSocket.close()
-    print(data)
-    kb = data/1000
-    mb = (kb/1000) * 8
-    rate = mb/mytime
+    kb = data/1024
+    mb = kb/1024
+    rate = (data/mytime)/((1000**2)/8)
 
     print('sent= {} KB rate={} Mbps'.format(kb,rate))
     #def __init__(self,name, port, time):
