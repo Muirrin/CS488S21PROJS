@@ -1,0 +1,33 @@
+Q2 Predictions:
+RTT: 282 ms
+Bandwith: 16 Mbits/sec
+
+Q2 Actual Results:
+RTT: 164.635 ms
+Bandwith: 18.1 Mbits/sec
+
+Our prediction for RTT while too high, was based on the idea that RTT(round trip time) measures the time it takes to send and recieve a single packet. Because there are more nodes when we ping from h1 to h4, the RTT will be close to the summation of the RTTs of these links. 
+
+For the bandwith, it is the capacity of data that can be sent at a single time in the network. In summary, it is the width of the band :D
+
+Q3 Predictions:
+Two pairs: RTT: 164.635 ms
+
+Three pairs: 
+RTT: 164.635 ms
+ 
+
+Q3 Actual Results
+
+RTT: 
+2-Pair: 164.439,164.165
+3-Pair: 165.455,165.539,164.779
+It is traveling the same path as in question 2 with the same nodes/links, therefore should stay approximately the same. This applies to both 2 and 3 pairs of hosts.
+
+Q4 Predictions:
+RTT: 164 ms, 200 ms 
+They have the same number of nodes but the time of h5 to h6 will increase because of overlap in Link2. 
+
+Q4 Actual Results: 
+RTT: 164.821 ms, 44.619 ms
+Each link has a different latency, which means that even though they have the same amount of nodes, RTT will be different as they only share L2.

@@ -1,0 +1,4 @@
+------------------------------------------------------------
+[ 40] local 10.0.0.4 port 5001 connected with 10.0.0.1 port 47102
+[ ID] Interval       Transfer     Bandwidth
+[ 40]  0.0-22.6 sec  48.6 MBytes  18.1 Mbits/sec

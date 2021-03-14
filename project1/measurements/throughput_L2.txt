@@ -1,0 +1,4 @@
+[ 40] local 10.0.0.3 port 5001 connected with 10.0.0.2 port 48862
+[ ID] Interval       Transfer     Bandwidth
+[ 40]  0.0-26.0 sec  29.5 MBytes  9.53 Mbits/sec
+
