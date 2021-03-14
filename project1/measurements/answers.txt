@@ -11,11 +11,14 @@ Our prediction for RTT while too high, was based on the idea that RTT(round trip
 For the bandwith, it is the capacity of data that can be sent at a single time in the network. In summary, it is the width of the band :D
 
 Q3 Predictions:
-Two pairs: RTT: 164.635 ms
-
-Three pairs: 
-RTT: 164.635 ms
- 
+RTT:
+Two pairs: 164.635 ms
+Three pairs: 164.635 ms
+The RTT will remain the same
+Bandwidth:
+2-Pair: 9 Mbits/sec, 9 Mbits/sec
+3-pair: 6 Mbits/sec, 6 Mbits/sec, 6 Mbits/sec
+The bandwidth will be split between the different connections.
 
 Q3 Actual Results
 
@@ -23,11 +26,21 @@ RTT:
 2-Pair: 164.439,164.165
 3-Pair: 165.455,165.539,164.779
 It is traveling the same path as in question 2 with the same nodes/links, therefore should stay approximately the same. This applies to both 2 and 3 pairs of hosts.
+Bandwidth:
+2-Pair: 11.4 Mbits/sec, 5.68 Mbits/sec
+3-pair: 9.82 Mbits/sec, 4.35 Mbits/sec, 4.56 Mbits/sec
+The initiating host takes up more bandwidth and the following connections are halved because the throughput is split. This is because of the effects of congestion avoidance and traffic. The summation is approximately the full bandwidth (~18.1 Mbits/sec)
 
 Q4 Predictions:
 RTT: 164 ms, 200 ms 
 They have the same number of nodes but the time of h5 to h6 will increase because of overlap in Link2. 
 
+Bandwidth: 15 Mbits/sec, 20 Mbits/sec
+The total bandwidth will slightly decrease because they are sharing Link2, causing a slight slowdown.
+
 Q4 Actual Results: 
 RTT: 164.821 ms, 44.619 ms
 Each link has a different latency, which means that even though they have the same amount of nodes, RTT will be different as they only share L2.
+
+Bandwidth: 13.7 Mbits/sec, 18.7 Mbits/sec
+H1>h4 and h5>h6 share Link2, causing a bottleneck as they overlap. h5>h6 has a base bandwidth of ~23.5 and as they only share Link2, the decrease will be slight.
