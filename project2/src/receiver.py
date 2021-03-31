@@ -5,24 +5,28 @@
 from socket import *
 import sys
 import select
+import time
 
-host="0.0.0.0"
-port = 9999
+#host="10.0.0.2"
+host = ''
+port = int(sys.argv[1])
 s = socket(AF_INET,SOCK_DGRAM)
 s.bind((host,port))
 
-addr = (host,port)
+addr = ('',port)
 buf=1024
-
-f = open("received.txt",'wb')
+t_start = time.time()
+#f = open("received.txt",'wb')
 
 data,addr = s.recvfrom(buf)
+
 try:
     while(data):
-        f.write(data)
+        data = data.decode()
+        sys.stdout.write(data)
         s.settimeout(2)
         data,addr = s.recvfrom(buf)
 except timeout:
-    f.close()
+    
     s.close()
     print("File Downloaded")
