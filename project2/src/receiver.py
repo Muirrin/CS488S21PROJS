@@ -21,7 +21,7 @@ t_start = time.time()
 data,addr = s.recvfrom(buf)
 
 try:
-    while(data):
+    while(1):
         data = data.decode()
         sys.stdout.write(data)
         s.settimeout(2)

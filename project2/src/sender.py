@@ -21,7 +21,7 @@ def packets(data):
 
 #getting the data
 for line in sys.stdin:
-  data = data + sys.stdin.read(buf)
+  data = data + line
  
 mypackets = packets(data)
 i = 0
