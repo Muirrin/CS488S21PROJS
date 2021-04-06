@@ -32,7 +32,7 @@ while (i<len(mypackets)):
     if(s.sendto(mypackets[i],addr)):
         print("sending ...")
         #data = f.read(buf)
-        numBytes += buf
+        numBytes += len(mypackets[i])
         i = i+1
 
 s.close()
